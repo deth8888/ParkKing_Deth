@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="libs/ratchet/ratchet.css">
     <link rel="stylesheet" href="libs/ratchet/ratchet-theme-android.css">
     <link rel="stylesheet" href="css/app.css">
-
+    <link rel="stylesheet" href="css/sweetalert.css">
     <script src="libs/ratchet/ratchet.js"></script>
 
     <style>
@@ -22,7 +22,7 @@
             top: 0;
             left: 0;
             /* Preserve aspet ratio */
-
+        
         min-width: 100vw;
         min-height: 100vh;
     }
@@ -38,44 +38,28 @@
     <div class="content">
         <center>
             <img id="pk-logo" src="img/ParkKing_logo.png" alt="" style="margin-top:15vh; margin-bottom: 5vh" width="200px">
-            <form style="width:90vw">
+            <div style="width:90vw">
                 <input id="username" type="text" placeholder="Username">
                 <input id="password" type="password" placeholder="Password" style="margin-bottom:7vh">
-                <button class="btn btn-block btn-positive" style="margin-bottom:3vh" id="btnlogin" >Login</button>
+                <button id="btnlogin" class="btn btn-block btn-positive" style="margin-bottom:3vh">Login</button>
+                <button id="btnloading" class="btn btn-block btn-positive" style="margin-bottom:3vh; display:none">Loading...</button>
                 <button class="btn btn-block btn-primary" style="margin-bottom:3vh">
                     <i class="fa fa-facebook-square" aria-hidden="true"></i> Login with Facebook
                 </button>
                 <a onclick="signupPage()">No Account Yet? Sign up now!</a>
-            </form>
+            </div>
         </center>
 
     </div>
     <!-- /.content -->
 
 
-          <!-- Successfully Login -->
-        
-        <div data-role="page" id="successlogin" data-close-btn="none">
-            <div data-role="header" data-position="fixed" style="background-color:#0555a4; color:white;">
-                <h1><span>Success!</span></h1>
-            </div>
-            <div data-role="content">
-                <h1><strong style="font-size:25px">Login Successful!</strong></h1>
-            </div>
-            <div data-role="footer" data-position="fixed" style="background-color:#0555a4; color:white;">
-                <a href="#" data-role="button" onclick="goToHome()" style="width:90%" >Okay</a>
-            </div>
-        </div>
-        
-        <!-- Failed Login -->
-
-
 </body>
-
-<script src="libs/bootstrap/js/jquery-2.2.4.js"></script>
+<script src="js/jquery-1.12.1.min.js"></script>
 <script src="libs/bootstrap/js/bootstrap.js"></script>
-<script src="js/cordova.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script src="js/script.js"></script>
+
 <script>
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, true);
@@ -91,18 +75,14 @@
 
     document.addEventListener("deviceready", onDeviceReady, true);
 
-                 function onDeviceReady()
-                 {
-                       document.addEventListener("backbutton", BackKeyDown, true);
-                 }
+    function onDeviceReady() {
+        document.addEventListener("backbutton", BackKeyDown, true);
+    }
 
-                 function BackKeyDown()
-                 {
-                     navigator.notification.alert();
-                     //navigator.app.exitApp();  // For Exit Application
-                 }
-
+    function BackKeyDown() {
+        navigator.notification.alert();
+        //navigator.app.exitApp();  // For Exit Application
+    }
 </script>
-
 
 </html>

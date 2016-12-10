@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ParkKing</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/ratchet/ratchet.css">
+    <link rel="stylesheet" href="libs/ratchet/ratchet-theme-ios.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="libs/ratchet/ratchet.js"></script>
+
+</head>
+<!-- GOD'S NOT DEAD! HE'S TRULY ALIVE! -->
+
+<body>
+    <header class="bar bar-nav">
+        <a class="icon icon-gear pull-right" href="#settingsModal"></a>
+        <h1 class="title">ParkKing Finder</h1>
+    </header>
+    <div id="parking-list" class="content">
+        <div class="bar bar-standard bar-header-secondary">
+            <form>
+                <input type="search" class="search" placeholder="Search">
+            </form>
+        </div>
+        <li class="table-view-cell table-view-divider" style="height: 7vh">Recommended Parking Areas</li>
+        <!--        <input type="search" class="search" placeholder="Search">-->
+        <ul id="ul-search" class="list table-view">
+
+            <!--
+            <li class="table-view-cell media">
+    <a class="push-right" href="choose-theater.html" data-transition="slide-in">
+        <img class="media-object pull-left" src="http://placehold.it/64x64">
+        <div class="media-body">
+            <h3>Argo</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+        </div>
+    </a>
+</li>
+-->
+        </ul>
+
+    </div>
+</body>
+
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.js"></script>
+<script src="js/list.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/search.js"></script>
+<script>
+    function mapPage() {
+        //        alert($(this).find('.name').val()); // alert("map")
+
+        //            window.localStorage.setItem("parkingName", parkingName);
+        //window.localStorage.setItem("address", address);
+        //window.localStorage.setItem("lat", lat);
+        //window.localStorage.setItem("lat", long);
+        //                    window.location = "map.html";
+    }
+</script>
+
+</html>

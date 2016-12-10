@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ParkKing</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/ratchet/ratchet.css">
+    <link rel="stylesheet" href="libs/ratchet/ratchet-theme-android.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <script src="libs/ratchet/ratchet.js"></script>
+
+    <style>
+    /*#bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* Preserve aspet ratio */
+
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    */
+    </style>
+</head>
+<!-- GOD'S NOT DEAD! HE'S TRULY ALIVE! -->
+
+<body ng-app="">
+    <header class="">
+    </header>
+
+    <div class="content">
+        <center>
+            <h2 style="margin-top:15vh; margin-bottom:5vh">Sign Up</h2>
+            <div style="width:90vw">
+            <form name="form">
+                <input id="name" type="text" placeholder="Name" ng-model="name" name="name" required>
+                <span ng-show="form.name.$touched && form.name.$invalid" style="color:red"><small>This field is required.</small></span>
+
+                <input id="contactnum" type="text" placeholder="Contact number (e.g 09xxxxxxxxx)" ng-model="number" name="number" maxlength="11" ng-required="true" onkeypress="return isNumberKey(event);">
+                <span ng-show="form.number.$touched && form.number.$invalid" style="color:red"><small>This field is required.</small></span>
+
+
+                <input id="username" type="email" placeholder="Email" name="email" ng-model="email" required>
+                 <span ng-show="form.email.$touched && form.email.$error.required" style="color:red"><small>This field is required.</small></span>
+                <span ng-show="form.email.$error.email" style="color:red"><small>email is not valid.</small></span>
+
+                <input id="backup_email" type="email" placeholder="Backup email" name="backup_email">
+                <!-- <span ng-show="form.backup_email.$touched && form.backup_email.$invalid" style="color:red"><small>This field is required.</small></span> -->
+
+                <input id="password" type="password" placeholder="Password" style="" name="password" ng-model="password" required>
+                <span ng-show="form.password.$touched && form.password.$invalid" style="color:red"><small>This field is required.</small></span>
+
+                <button class="btn btn-block btn-positive" id="btnsignup" style="margin-bottom:3vh">Sign Up</button>
+                 <button id="btnloading" class="btn btn-block btn-positive" style="margin-bottom:3vh; display:none">Loading...</button>
+                <button class="btn btn-block btn-primary" style="margin-bottom:5vh">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i> Sign up with Facebook
+                </button>
+                <a onclick="loginPage()">Already have an account? Sign in now!</a>
+            </form>
+            </div>
+        </center>
+
+    </div>
+    <!-- /.content -->
+
+
+<script src="js/angular.min.js"></script>
+</body>
+<script src="js/jquery-1.12.1.min.js"></script>
+<!--<script src="libs/bootstrap/js/jquery-3.1.1.js"></script>-->
+<script src="libs/bootstrap/js/bootstrap.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script src="js/signup.js?u"></script>
+
+
+<script>
+function loginPage() {
+        window.location = "index.html";
+    }
+</script>
+
+
+<script>
+function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : evt.keyCode
+    return !(charCode > 31 && (charCode < 48 || charCode > 57));
+}
+
+</script>
+
+</html>
