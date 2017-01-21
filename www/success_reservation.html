@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ParkKing</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/ratchet/ratchet.css">
+    <link rel="stylesheet" href="libs/ratchet/ratchet-theme-android.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <script src="libs/ratchet/ratchet.js"></script>
+
+    <style>
+    .image {
+     position: absolute;
+    top: -35px;
+    /* text-align: center; */
+    /* align-items: center; */
+    width: 100%;
+    }
+
+    .texts {
+
+        position: relative;
+        top: 100px;
+
+    }
+    </style>
+</head>
+<!-- GOD'S NOT DEAD! HE'S TRULY ALIVE! -->
+
+<body ng-app="">
+    <header class="">
+    </header>
+
+    <div class="content">
+        <center>
+        <div class="image">
+           <img src="img/success_reservation.png" height="100" width="100">
+
+        </div>
+
+        <div class="texts">
+
+            <h2 style="margin-top:15vh; margin-bottom:5vh; font-size:40px;">Reservation Complete</h2>
+            <div style="width:90vw">
+
+            <p> Thank You for choosing ParkKing! Stay safe! </p>
+            
+
+            <br><br>
+
+
+            <form name="form">
+
+                <button class="btn btn-block btn-positive" id="" style="margin-bottom:3vh" onclick="success()">OK</button>
+                
+            </form>
+
+
+            </div>
+        </center>
+
+    </div>
+    <!-- /.content -->
+
+
+<script src="js/angular.min.js"></script>
+</body>
+<script src="js/jquery-1.12.1.min.js"></script>
+<!--<script src="libs/bootstrap/js/jquery-3.1.1.js"></script>-->
+<script src="libs/bootstrap/js/bootstrap.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script src="js/signup.js?u"></script>
+
+
+<script>
+function success() {
+        window.location = "search.html";
+
+    }
+</script>
+
+
+<script>
+function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : evt.keyCode
+    return !(charCode > 31 && (charCode < 48 || charCode > 57));
+}
+
+</script>
+
+</html>
